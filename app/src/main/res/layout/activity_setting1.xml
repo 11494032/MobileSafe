@@ -77,7 +77,8 @@
            android:layout_height="wrap_content"
            android:layout_alignParentRight="true"
            android:layout_alignParentBottom="true"
-           android:text="下一步"/>
+           android:text="下一步"
+           android:background="@drawable/btn_green_selector"/>
    </RelativeLayout>
 
 
