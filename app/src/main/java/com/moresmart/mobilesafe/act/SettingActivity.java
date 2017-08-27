@@ -28,14 +28,14 @@ public class SettingActivity extends Activity{
         sp = getSharedPreferences( "config", MODE_PRIVATE );
 
         boolean auto_update = sp.getBoolean("auto_update",false);
-        siv_update.setTitle("自动跟新设置");
+       // siv_update.setTitle("自动跟新设置");
         if( auto_update ) {
-            siv_update.setDesc("自动跟新已经开启");
+       //     siv_update.setDesc("自动跟新已经开启");
             siv_update.setChecked( true);
         }
         else
         {
-            siv_update.setDesc("自动跟新已经关闭");
+       //     siv_update.setDesc("自动跟新已经关闭");
             siv_update.setChecked( false);
         }
 
@@ -46,13 +46,13 @@ public class SettingActivity extends Activity{
 
                 if( siv_update.isChecked() )
                 {
-                    siv_update.setDesc("自动跟新已经关闭");
+          //          siv_update.setDesc("自动跟新已经关闭");
                     siv_update.setChecked( false);
                     sp.edit().putBoolean("auto_update",false).commit();
                 }
                 else
                 {
-                    siv_update.setDesc("自动跟新已经开启");
+          //          siv_update.setDesc("自动跟新已经开启");
                     siv_update.setChecked( true);
                     sp.edit().putBoolean("auto_update",true).commit();
                 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:moresmart="http://schemas.android.com/apk/com.moresmart.mobilesafe"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,6 +13,9 @@
     <com.moresmart.mobilesafe.view.SettingItemView
         android:id="@+id/siv_update"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        moresmart:title="自动跟新设置"
+        moresmart:desc_on="自动跟新已经开启"
+        moresmart:desc_off="自动跟新已经关闭">
     </com.moresmart.mobilesafe.view.SettingItemView>
 </LinearLayout>
