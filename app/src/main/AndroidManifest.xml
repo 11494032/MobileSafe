@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".act.HomeActivity" />
+        <activity android:name=".act.SettingActivity" />
     </application>
 
 </manifest>
