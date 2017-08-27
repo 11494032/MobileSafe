@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.moresmart.mobilesafe.R;
+import com.moresmart.mobilesafe.utils.MD5util;
 
 /**
  * @author <11494032@qq.com>
@@ -119,10 +120,11 @@ public class HomeActivity extends Activity{
                 if( !TextUtils.isEmpty(password) )
                 {
                     String savePassword = mPref.getString("password",null);
-                    if( savePassword.equals(password))
+                    if( MD5util.encode(password).equals(savePassword))
                     {
                         Toast.makeText( HomeActivity.this,"登入成功", Toast.LENGTH_SHORT).show();
                         alertDialog.dismiss();
+                        startActivity( new Intent(HomeActivity.this,LostFindActivity.class));
                     }
                     else
                     {
@@ -172,7 +174,7 @@ public class HomeActivity extends Activity{
                 {
                     if( password.equals(conPassword))
                     {
-                        mPref.edit().putString("password",password).commit();
+                        mPref.edit().putString("password", MD5util.encode(password)).commit();
 
                         Toast.makeText( HomeActivity.this,"密码已设置", Toast.LENGTH_LONG).show();
                         alertDialog.dismiss();
