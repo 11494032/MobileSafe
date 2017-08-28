@@ -23,10 +23,12 @@ public class Setting2Activity extends Activity {
     public  void nextClick( View view)
     {
         startActivity( new Intent( this, Setting3Activity.class));
+        overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
     }
 
     public  void preClick( View view)
     {
         startActivity( new Intent( this, Setting1Activity.class));
+        overridePendingTransition( R.anim.tran_previous_in, R.anim.tran_previous_out);
     }
 }

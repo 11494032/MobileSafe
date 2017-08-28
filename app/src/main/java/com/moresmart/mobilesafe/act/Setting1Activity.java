@@ -25,6 +25,7 @@ public class Setting1Activity extends Activity {
     public  void nextClick( View view)
     {
         startActivity( new Intent( this, Setting2Activity.class));
+        overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
     }
 
 }
