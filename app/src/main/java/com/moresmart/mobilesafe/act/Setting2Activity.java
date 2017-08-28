@@ -9,22 +9,24 @@ import android.view.View;
 import com.moresmart.mobilesafe.R;
 
 /**
- * Created by Administrator on 2017/8/27.
+ * Created by Administrator on 2017/8/28.
  */
 
-public class Setting1Activity extends Activity {
-
+public class Setting2Activity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting1);
-
+        setContentView( R.layout.activity_setting2);
     }
 
     public  void nextClick( View view)
     {
-        startActivity( new Intent( this, Setting2Activity.class));
+        startActivity( new Intent( this, Setting3Activity.class));
     }
 
+    public  void preClick( View view)
+    {
+        startActivity( new Intent( this, Setting1Activity.class));
+    }
 }

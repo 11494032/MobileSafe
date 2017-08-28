@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:moresmart="http://schemas.android.com/apk/com.moresmart.mobilesafe"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         style="@style/TitleBarTextView"
-        android:text="1.欢迎使用手机防盗"/>
+        android:text="2.手机卡绑定"/>
 
-    <TextView
-        style="@style/ContentStyle"
-        android:text="你的手机防盗卫士"
-       />
-    <TextView
+  <TextView
+     style="@style/ContentStyle"
+      android:text="下次手机重启如果发生SIM卡变化会发送报警短信"
+      />
 
-        style="@style/ContentStyle"
-        android:text="SIM卡变更报警"
-        android:gravity="center"
-        android:drawableLeft="@android:drawable/star_big_on"
-        />
+    <com.moresmart.mobilesafe.view.SettingItemView
+        android:id="@+id/siv_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        moresmart:title="点击绑定sim卡"
+        moresmart:desc_on="sim卡已绑定"
+        moresmart:desc_off="sim卡未绑定"
+     >
 
-    <TextView
+    </com.moresmart.mobilesafe.view.SettingItemView>
 
-        style="@style/ContentStyle"
-        android:gravity="center"
-        android:drawableLeft="@android:drawable/star_big_on"
-        android:text="GPS追踪"
-        />
 
-    <TextView
-        style="@style/ContentStyle"
-        android:gravity="center"
-        android:drawableLeft="@android:drawable/star_big_on"
-        android:text="远程锁屏"
-        />
+
 
 
     <LinearLayout
@@ -45,11 +38,11 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/presence_online"/>
+            android:src="@android:drawable/presence_invisible"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/presence_invisible"/>
+            android:src="@android:drawable/presence_online"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,10 +63,19 @@
            android:layout_height="wrap_content"
            android:layout_centerHorizontal="true"
            android:layout_centerVertical="true"
-           android:src="@drawable/setup1"/>
+           android:src="@drawable/bind"/>
 
        <Button
+           android:id="@+id/nextPage"
            style="@style/NextStyle"/>
+
+       <Button
+
+         style="@style/PreStyle"
+           >
+
+       </Button>
+
    </RelativeLayout>
 
 
