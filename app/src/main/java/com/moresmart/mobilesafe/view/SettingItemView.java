@@ -67,12 +67,18 @@ public class SettingItemView extends RelativeLayout {
         tv_desc.setText( title );
     }
 
+
+    /**
+     * 判断是否勾选
+     *
+     * @return
+     */
     public boolean isChecked() {
         return cbStatus.isChecked();
-
     }
     public  void setChecked( boolean checked)
     {
+
         cbStatus.setChecked( checked );
 
         // 根据选择的状态,更新文本描述

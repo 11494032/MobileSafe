@@ -35,6 +35,7 @@ public class Setting1Activity extends BaseActivity {
     @Override
     public void nextPage() {
         startActivity( new Intent( this, Setting2Activity.class));
+        finish();
         overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
     }
 

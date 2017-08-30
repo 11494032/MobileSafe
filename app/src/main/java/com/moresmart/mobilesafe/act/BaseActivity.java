@@ -35,18 +35,17 @@ public abstract  class BaseActivity extends Activity {
 
         super.onCreate(savedInstanceState);
 
+
         detector = new GestureDetector( this,new GestureDetector.SimpleOnGestureListener()
         {
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 
                 if( ( e1.getRawX() - e2.getRawX()) > 200 ) {
-                    System.out.println("99999999999999999");
                     prePage();
                     return true;
                 }
                 if(  ( e2.getRawX() - e1.getRawX()) > 200 ) {
-                    System.out.println("888888888");
                     nextPage();
                     return true;
                 }
@@ -65,6 +64,6 @@ public abstract  class BaseActivity extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
 
         detector.onTouchEvent( event );
-        return super.onTouchEvent(event);
+       return super.onTouchEvent(event);
     }
 }

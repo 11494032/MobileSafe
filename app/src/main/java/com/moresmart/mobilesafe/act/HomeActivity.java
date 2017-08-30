@@ -125,6 +125,7 @@ public class HomeActivity extends Activity{
                         Toast.makeText( HomeActivity.this,"登入成功", Toast.LENGTH_SHORT).show();
                         alertDialog.dismiss();
                         startActivity( new Intent(HomeActivity.this,LostFindActivity.class));
+                        finish();
                     }
                     else
                     {

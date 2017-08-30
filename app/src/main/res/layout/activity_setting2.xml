@@ -15,7 +15,7 @@
       />
 
     <com.moresmart.mobilesafe.view.SettingItemView
-        android:id="@+id/siv_bind"
+        android:id="@+id/siv_sim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         moresmart:title="点击绑定sim卡"
@@ -24,9 +24,6 @@
      >
 
     </com.moresmart.mobilesafe.view.SettingItemView>
-
-
-
 
 
     <LinearLayout

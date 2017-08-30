@@ -54,4 +54,9 @@
         <item name="android:background">@drawable/btn_green_selector</item>
         <item name="android:onClick">preClick</item>
     </style>
+s
+     <!-- CustomCheckBox theme -->
+        <style name="CustomCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+            <item name="android:button">@drawable/checkbox_style</item>
+         </style>
 </resources>

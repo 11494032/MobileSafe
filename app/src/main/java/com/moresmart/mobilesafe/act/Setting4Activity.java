@@ -28,6 +28,7 @@ public class Setting4Activity extends BaseActivity {
     @Override
     public void prePage() {
         startActivity( new Intent( this, Setting3Activity.class));
+        finish();
         overridePendingTransition( R.anim.tran_previous_in, R.anim.tran_previous_out);
     }
 
@@ -35,6 +36,7 @@ public class Setting4Activity extends BaseActivity {
     public void nextPage() {
         sp.edit().putBoolean("configed", true).commit();
         startActivity( new Intent( this, LostFindActivity.class));
+        finish();
         overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
     }
 

@@ -23,6 +23,7 @@ public class Setting3Activity extends BaseActivity {
     @Override
     public void prePage() {
         startActivity( new Intent( this, Setting2Activity.class));
+        finish();
         overridePendingTransition( R.anim.tran_previous_in, R.anim.tran_previous_out);
 
     }
@@ -30,6 +31,7 @@ public class Setting3Activity extends BaseActivity {
     @Override
     public void nextPage() {
         startActivity( new Intent( this, Setting4Activity.class));
+        finish();
         overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
     }
 
