@@ -13,7 +13,7 @@ import com.moresmart.mobilesafe.R;
  * Created by Administrator on 2017/8/29.
  */
 
-public class Setting4Activity extends Activity {
+public class Setting4Activity extends BaseActivity {
 
     private  SharedPreferences sp;
     @Override
@@ -25,16 +25,26 @@ public class Setting4Activity extends Activity {
 
     }
 
-    public  void preClick( View view)
-    {
+    @Override
+    public void prePage() {
         startActivity( new Intent( this, Setting3Activity.class));
         overridePendingTransition( R.anim.tran_previous_in, R.anim.tran_previous_out);
     }
 
+    @Override
+    public void nextPage() {
+        sp.edit().putBoolean("configed", true).commit();
+        startActivity( new Intent( this, LostFindActivity.class));
+        overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
+    }
+
+    public  void preClick(View view)
+    {
+        prePage();
+    }
+
     public  void nextClick( View view)
     {
-         sp.edit().putBoolean("configed", true).commit();
-         startActivity( new Intent( this, LostFindActivity.class));
-        overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
+        nextPage();
     }
 }

@@ -12,7 +12,7 @@ import com.moresmart.mobilesafe.R;
  * Created by Administrator on 2017/8/29.
  */
 
-public class Setting3Activity extends Activity {
+public class Setting3Activity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,15 +20,27 @@ public class Setting3Activity extends Activity {
         setContentView(R.layout.activity_setting3);
     }
 
-    public  void nextClick( View view)
-    {
+    @Override
+    public void prePage() {
+        startActivity( new Intent( this, Setting2Activity.class));
+        overridePendingTransition( R.anim.tran_previous_in, R.anim.tran_previous_out);
+
+    }
+
+    @Override
+    public void nextPage() {
         startActivity( new Intent( this, Setting4Activity.class));
         overridePendingTransition( R.anim.tran_in, R.anim.tran_out);
     }
 
+    public  void nextClick(View view)
+    {
+        nextPage();
+    }
+
     public  void preClick( View view)
     {
-        startActivity( new Intent( this, Setting2Activity.class));
-        overridePendingTransition( R.anim.tran_previous_in, R.anim.tran_previous_out);
+        prePage();
     }
+
 }
